@@ -9,6 +9,10 @@ import (
 var DB *gorm.DB
 
 func InitDB() *gorm.DB {
+	/*
+		driverName :=viper.GetString("datasource.driverName")
+		port :=
+	*/
 	dsn := "root:Mysql123..@tcp(127.0.0.1:3306)/blog?charset=utf8mb4&parseTime=True&loc=Local"
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	if err != nil {
